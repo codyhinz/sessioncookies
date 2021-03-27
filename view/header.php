@@ -11,19 +11,16 @@
 <body class="container-fluid text-center">
     <main>
     <header>
-    <div class="container">
-        <div class="float-left"><h3>Zippy's Used Autos</h3></div>
-        <div class="float-right">
-            <?php if($action != 'register' && !isset($_SESSION['userid']) && $action != 'logout') { ?>
-                <a class="register_link" href=".?action=register">Register</a>
-            <?php } else if($action != 'register' && isset($_SESSION['userid']) && $action != 'logout') { ?>
-                <p class="register_link">Welcome, <?= $_SESSION['userid']; ?>! (<a href=".?action=logout">Sign Out</a>)</p>
-            <?php } else { ?>
-                <div class="register_link">&nbsp;</div>
-            <?php } ?>
-        </div>
+        <h3>Zippy's Used Autos</h3>
         <hr/>
-    </div>    
+        <?php if($action != 'register' && !isset($_SESSION['userid']) && $action != 'logout') { ?>
+            <a class="register_link" href=".?action=register">Register</a>
+        <?php } else if($action != 'register' && isset($_SESSION['userid']) && $action != 'logout') { ?>
+            <p class="register_link">Welcome, <?= $_SESSION['userid']; ?>! (<a href=".?action=logout">Sign Out</a>)</p>
+        <?php } else { ?>
+            <div class="register_link">&nbsp;</div>
+        <?php } ?>
+        <hr/>  
     </header>
     
     
