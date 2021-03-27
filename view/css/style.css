@@ -77,6 +77,10 @@ td {
     font-size: 0.6rem;
 }
 
+.register_link{
+    font-size: 2rem;
+}
+
 @media screen and (min-width: 280px) {
     header {
       font-size: 2rem;
