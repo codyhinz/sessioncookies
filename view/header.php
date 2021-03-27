@@ -11,11 +11,11 @@
 <body class="container-fluid text-center">
     <main>
     <header>
-        <h3>Zippy's Used Autos</h3>
+        <h3>Zippy's Used Autos<hr/></h3>
         <?php if($action != 'register' && !isset($_SESSION['userid']) && $action != 'logout') { ?>
-            <a class="register_link" href=".?action=register">Register</a><hr/>
+            <a class="register_link" href=".?action=register">Register</a>
         <?php } else if($action != 'register' && isset($_SESSION['userid']) && $action != 'logout') { ?>
-            <p class="register_link">Welcome, <?= $_SESSION['userid']; ?>! (<a href=".?action=logout">Sign Out</a>)</p><hr/>
+            <p class="register_link">Welcome, <?= $_SESSION['userid']; ?>! (<a href=".?action=logout">Sign Out</a>)</p>
         <?php } else { ?>
             <div class="register_link">&nbsp;</div>
         <?php } ?>
