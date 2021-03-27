@@ -19,10 +19,11 @@
     $types = get_types();
     $classes = get_classes();
 
-    $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING);
+    
 
     $vehicles = list_vehicles($make_id, $sort_by, $type_id, $class_id);
-
+    $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING);
+    
     include('view/vehicle_list.php');
 
     switch($action) {
