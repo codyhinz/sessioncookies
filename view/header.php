@@ -10,13 +10,18 @@
 </head>
 <body class="container-fluid text-center">
     <main>
-    <header>Zippy's Used Autos<hr/></header>
-    <div>
-        <?php if($action != 'register' && !isset($_SESSION['userid']) && $action != 'logout') { ?>
-            <a class="register_link" href=".?action=register">Register</a>
-        <?php } else if($action != 'register' && isset($_SESSION['userid']) && $action != 'logout') { ?>
-            <p class="register_link">Welcome, <?= $_SESSION['userid']; ?>! (<a href=".?action=logout">Sign Out</a>)</p>
-        <?php } else { ?>
-            <div class="register_link">&nbsp;</div>
-        <?php } ?>
-    </div>
+    <header>
+        Zippy's Used Autos
+        <div class="float-right">
+            <?php if($action != 'register' && !isset($_SESSION['userid']) && $action != 'logout') { ?>
+                <a class="register_link" href=".?action=register">Register</a>
+            <?php } else if($action != 'register' && isset($_SESSION['userid']) && $action != 'logout') { ?>
+                <p class="register_link">Welcome, <?= $_SESSION['userid']; ?>! (<a href=".?action=logout">Sign Out</a>)</p>
+            <?php } else { ?>
+                <div class="register_link">&nbsp;</div>
+            <?php } ?>
+        </div>
+        <hr/>
+    </header>
+    
+    
