@@ -11,8 +11,8 @@
 <body class="container-fluid text-center">
     <main>
     <header>
-    <div class="row">
-        <h3 class="float-left">Zippy's Used Autos</h3>
+    <div class="container">
+        <div class="float-left"><h3>Zippy's Used Autos</h3></div>
         <div class="float-right">
             <?php if($action != 'register' && !isset($_SESSION['userid']) && $action != 'logout') { ?>
                 <a class="register_link" href=".?action=register">Register</a>
