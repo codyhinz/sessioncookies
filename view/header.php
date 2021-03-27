@@ -12,15 +12,14 @@
     <main>
     <header>
         <h3>Zippy's Used Autos</h3>
-        <hr/>
         <?php if($action != 'register' && !isset($_SESSION['userid']) && $action != 'logout') { ?>
-            <a class="register_link" href=".?action=register">Register</a>
+            <a class="register_link" href=".?action=register">Register</a><hr/>
         <?php } else if($action != 'register' && isset($_SESSION['userid']) && $action != 'logout') { ?>
-            <p class="register_link">Welcome, <?= $_SESSION['userid']; ?>! (<a href=".?action=logout">Sign Out</a>)</p>
+            <p class="register_link">Welcome, <?= $_SESSION['userid']; ?>! (<a href=".?action=logout">Sign Out</a>)</p><hr/>
         <?php } else { ?>
             <div class="register_link">&nbsp;</div>
         <?php } ?>
-        <hr/>  
+        <hr/>
     </header>
     
     
